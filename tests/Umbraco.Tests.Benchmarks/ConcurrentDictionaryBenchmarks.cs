@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Concurrent;
 using BenchmarkDotNet.Attributes;
 using Umbraco.Cms.Core.Collections;

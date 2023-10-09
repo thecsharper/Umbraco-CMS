@@ -1,4 +1,3 @@
-using System;
 using System.Xml;
 using BenchmarkDotNet.Attributes;
 using Umbraco.Tests.Benchmarks.Config;

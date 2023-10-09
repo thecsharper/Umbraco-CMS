@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
 using BenchmarkDotNet.Attributes;
 
 namespace Umbraco.Tests.Benchmarks

@@ -1,9 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using BenchmarkDotNet.Attributes;
 using Umbraco.Tests.Benchmarks.Config;
 
@@ -12,7 +6,8 @@ namespace Umbraco.Tests.Benchmarks;
 [QuickRunWithMemoryDiagnoserConfig]
 public class StringReplaceFirstBenchmarks
 {
-    [Params("Test string",
+    [Params(
+        "Test string",
         "This is a test string that contains multiple test entries",
         "This is a string where the searched value is very far back. The system needs to go through all of this code before it reaches the test")]
     public string Text { get; set; }
@@ -36,7 +31,7 @@ public class StringReplaceFirstBenchmarks
             return Text;
         }
 
-        return Text.Substring(0, pos) + Replace + Text.Substring(pos + Search.Length);
+        return Text[..pos] + Replace + Text[(pos + Search.Length)..];
     }
 
     [Benchmark(Description = "Replace first w/ span")]

@@ -1,4 +1,3 @@
-using System;
 using System.Linq.Expressions;
 using BenchmarkDotNet.Attributes;
 using Microsoft.Extensions.Options;

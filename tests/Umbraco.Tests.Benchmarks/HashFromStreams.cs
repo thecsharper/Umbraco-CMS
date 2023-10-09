@@ -1,4 +1,3 @@
-using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 using BenchmarkDotNet.Attributes;
@@ -14,12 +13,11 @@ public class HashFromStreams
     private readonly SHA1 _normal;
 
     private readonly Stream _smallFile;
+
     // according to this post: https://stackoverflow.com/a/1051777/694494
     // the SHA1CryptoServiceProvider is faster, but that is not reflected in these benchmarks.
 
-    /*
-    
-    BenchmarkDotNet=v0.13.0, OS=Windows 10.0.19042.1052 (20H2/October2020Update)
+    /* BenchmarkDotNet=v0.13.0, OS=Windows 10.0.19042.1052 (20H2/October2020Update)
     Intel Core i7-7700HQ CPU 2.80GHz (Kaby Lake), 1 CPU, 8 logical and 4 physical cores
     .NET SDK=5.0.300-preview.21258.4
       [Host]     : .NET 5.0.7 (5.0.721.25508), X64 RyuJIT

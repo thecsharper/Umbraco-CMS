@@ -1,4 +1,3 @@
-using System;
 using BenchmarkDotNet.Attributes;
 using Umbraco.Tests.Benchmarks.Config;
 
@@ -22,7 +21,7 @@ namespace Umbraco.Tests.Benchmarks
             var lastIndex = fileName.LastIndexOf('.');
             if (lastIndex > 0)
             {
-                var ext = fileName.Substring(lastIndex);
+                var ext = fileName[lastIndex..];
 
                 // file extensions cannot contain whitespace
                 if (ext.Contains(" "))
@@ -30,7 +29,7 @@ namespace Umbraco.Tests.Benchmarks
                     return fileName;
                 }
 
-                return string.Format("{0}", fileName.Substring(0, fileName.IndexOf(ext, StringComparison.Ordinal)));
+                return string.Format("{0}", fileName[..fileName.IndexOf(ext, StringComparison.Ordinal)]);
             }
 
             return fileName;

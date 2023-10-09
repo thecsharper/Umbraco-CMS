@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
 using BenchmarkDotNet.Attributes;
 using Microsoft.Extensions.Logging.Abstractions;
 using Umbraco.Cms.Core.Composing;

@@ -1,4 +1,3 @@
-using System;
 using System.Text;
 using BenchmarkDotNet.Attributes;
 using Umbraco.Cms.Core;

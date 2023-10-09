@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using BenchmarkDotNet.Attributes;
 
 namespace Umbraco.Tests.Benchmarks;
@@ -11,7 +10,6 @@ public class EnumeratorBenchmarks
     {
         foreach (var t in EnumerateOneWithArray(1))
         {
-            ;
         }
     }
 
@@ -20,7 +18,6 @@ public class EnumeratorBenchmarks
     {
         foreach (var t in EnumerateOneWithYield(1))
         {
-            ;
         }
     }
 
